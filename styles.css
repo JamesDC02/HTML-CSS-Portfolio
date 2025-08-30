@@ -1,5 +1,5 @@
 :root {
-    --color-accent: #5eead4;
+    
     --background-accent: rgba(45, 212, 191, .1);
     --color-highlight: #e2e8f0;
     
@@ -17,7 +17,9 @@ html {
 }
 
 body {
-    background-color: #0f172a;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000218;
     color: #94a3b8;
     padding: 4rem 2rem;
     display: grid;
@@ -40,13 +42,6 @@ h6::selection {
     color: #0f172a;
 }
 
-.underlay {
-    position: fixed;
-    background-color: #172554;
-    inset: 0;
-    opacity: 0.15;
-}
-
 header,
 main,
 footer {
@@ -62,8 +57,7 @@ header {
 }
 
 header h1,
-header h4,
-.lightText {
+header h4 {
     color: var(--color-highlight)
 }
 
@@ -121,25 +115,63 @@ section h2 {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 500;
+    padding-left: 1rem;
 }
 
-.sticky-header {
+.stickyHeaders {
     position: sticky;
-    top: 0;
+    top: 10px;
     padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #e2e8f0;
 }
 
-.sticky-header h2 {
+.stickyHeader {
+    background: black;
+    display: flex;
+    justify-content: center;
+}
+
+.stickyHeader::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        950px circle at 0 0,
+        rgba(11, 155, 244, 0.1),
+        transparent 80%
+    );
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    box-shadow: -1px -1px 6px -1.5px #e2e8f0;
+}
+
+
+
+.stickyHeader:hover::before {
+    opacity:1;
+}
+
+.stickyHeaders h2 {
     position: relative;
     z-index: 2;
+    
 }
 
-.sticky-header::before {
+.stickyHeaders::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: #101a31;
-    opacity: 0.9;
+    background: #000218;
+    border: 1px solid;
+    border-image: linear-gradient(-68deg,#575757, #e2e8f0);
+    border-image-slice: 1;
+    
 }
 
 .about-contents {
@@ -213,16 +245,99 @@ section h2 {
 .tag-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.7rem;
     color: var(--color-accent);
     
 }
 
 .tag {
-    border-radius: 0.5rem;
+    background: #1E1E1E;
+    border: 1px solid;
     padding: 0.25rem 0.5rem;
-    background: rgba(45, 212, 191, .1);
+    
 }
+
+.illustrator {
+    border-image: linear-gradient(-68deg,#301e09, #DD8603);
+    color: #FF9500;
+    box-shadow: -1.5px -1px 5px -2px #FF9500;
+}
+
+.photoshop {
+    border-image: linear-gradient(-68deg,#061c64, #0C91FF);
+    color: #1D8EFF;
+    box-shadow: -1.5px -1px 5px -2px #1D8EFF;
+}
+
+.indesign {
+    border-image: linear-gradient(-68deg,#210102, #FF0919);
+    color: #FF0033;
+    box-shadow: -1.5px -1px 5px -2px #FF0033;
+}
+
+.figma {
+    border-image: linear-gradient(-68deg,#1f022f, #9103DD);
+    color: #c854fd;
+    box-shadow: -1.5px -1px 5px -2px #c854fd;
+
+}
+
+.readymag {
+    border-image: linear-gradient(-68deg,#071a58, #66BAFF);
+    color: #63B1FF;
+    box-shadow: -1.5px -1px 5px -2px #63B1FF;
+}
+
+.blender {
+    border-image: linear-gradient(-68deg,#341f0a, #DD5E03);
+    color: #FF7700;
+    box-shadow: -1.5px -1px 5px -2px #FF7700;
+}
+
+.mailchimp {
+    border-image: linear-gradient(-68deg,#413B04, #FFE500);
+    color: #FFDD1C;
+    box-shadow: -1.5px -1px 5px -2px #FFDD1C;
+}
+
+.hootsuite {
+    border-image: linear-gradient(-68deg,#4C1605, #FF3700);
+    color: #FF4921;
+    box-shadow: -1.5px -1px 5px -2px #FF4921;
+}
+
+.adobe {
+    border-image: linear-gradient(-68deg,#590F0F, #FF1B1B);
+    color: #FC0000;
+    box-shadow: -1.5px -1px 5px -2px #FC0000;
+}
+
+.axure {
+    border-image: linear-gradient(-68deg,#04450A, #71FF3D);
+    color: #21FF5C;
+    box-shadow: -1.5px -1px 5px -2px #21FF5C;
+}
+
+.wordpress {
+    border-image: linear-gradient(-68deg,#052844, #00C3FF);
+    color: #31F4FE;
+    box-shadow: -1.5px -1px 5px -2px #31F4FE;
+}
+
+.illustrator,
+.photoshop,
+.indesign,
+.figma,
+.readymag,
+.blender,
+.mailchimp,
+.hootsuite,
+.adobe,
+.axure,
+.wordpress {
+    border-image-slice: 1;
+}
+
 
 .tag p {
     font-size: 0.8rem;
@@ -297,8 +412,10 @@ footer p {
 
 .scroll-to-top {
     text-decoration: none;
-    color: var(--color-accent);
-    background: var(--background-accent);
+    background: #01031a;
+    color: #e2e8f0;
+    border-image-slice: 1;
+    box-shadow: -1.5px -1px 5px -2px #e2e8f0;
     padding: 0 0.8rem;
     aspect-ratio: 1/1;
     display: grid;
@@ -350,6 +467,8 @@ footer p {
     .social-link-container i {
         font-size: 2rem;
     }
+
+    
 
 }
 
@@ -412,9 +531,10 @@ footer p {
 
     main {
         margin-right: auto;
+        padding-top: 10.7rem;
     }
-
-    .sticky-header {
+    
+    .fullscreen {
         display: none;
     }
 
