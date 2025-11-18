@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<!-- <a target="_blank" class="anchor-text" href="https://fonts.google.com/selection/embed">myself</a> -->
 
 <body id="top-of-page">
     
+    <!-- Title, Intro, Menu and Social Links -->
     <header>
         <a href="/">
             <h1>James De Carli</h1>
@@ -24,17 +24,39 @@
         
         <h4>Web and Graphic Designer</h4>
         <p>A keen eye for detail and a love for crafting digital experiences.</p>
+        
+        <!-- Menu Buttons -->
         <nav>
-            <a class="anchor-text" href="#about">
-                <p>About</p>
-            </a>
-            <a class="anchor-text" href="#experience">
-                <p>Experience</p>
-            </a>
-            <a class="anchor-text" href="#projects">
-                <p>Projects</p>
-            </a>
+            <div class="cards">
+                <a class="card" href="#about">
+                    <div class="card-content">                       
+                            <p class="menuText">About</p>
+                    </div>
+                </a>
+                <a class="card" href="#experience">
+                    <div class="card-content">
+                        <p class="menuText">Experience</p>
+                    </div>
+                </a>
+                <a class="card" href="#projects">
+                    <div class="card-content">
+                            <p class="menuText">Projects</p>
+                    </div>
+                </a>
+                <a class="card" href="">
+                    <div class="card-content">
+                            <p class="menuText">Gallery</p>
+                    </div>
+                </a>
+                <a class="card" href="#contact">
+                    <div class="card-content">
+                            <p class="menuText">Contact</p>
+                    </div>
+                </a>
+            </div>
         </nav>
+
+        <!-- Social Links -->
         <div class="social-link-container">
             <a class="social-link" href="https://www.linkedin.com/in/james-de-carli/" target="_blank">
                 <i class="fa-brands fa-linkedin-in">
@@ -45,7 +67,7 @@
                 </i>
                 
             </a>
-            <a class="social-link" href="https://www.instagram.com/blendmelbourne/" target="_blank">
+            <a class="social-link" href="https://www.instagram.com/jamesdecarli/" target="_blank">
                 <i class="fa-brands fa-instagram">
                 </i>
             </a>
@@ -55,12 +77,13 @@
             </a>
         </div>
     </header>
+
+    <!-- About, Experience, Projects and Contact -->
     <main>
+        <!-- About -->
         <section id="about">
-            <div class="stickyHeaders fullscreen">
-                <div class="stickyHeader">
-                    <h2 class="lightText fullscreen">ABOUT</h2>
-                </div>
+            <div class="fullscreen titleHeading">
+                <h2>About</h2>
             </div>
             <div class="about-contents">
                 <p>Hey, I'm James, a passionate Graphic and UX Designer with a keen eye for detail and a love for crafting digital experiences. I'm based in Melbourne, Australia, with a background in both graphic design and user experience.</p>
@@ -69,20 +92,18 @@
             </div>
         </section>
         
-        
-        
+        <!-- Experience -->
         <section id="experience">
-            <div class="stickyHeaders">
-                <div class="stickyHeader">
-                    <h2 class="lightText">EXPERIENCE</h2>
-                </div>
+            <!-- Experience Subheading -->
+            <div class="titleHeading">
+                <h2>EXPERIENCE</h2>
             </div>
             <div class="experience-contents">
                 <div class="experience-card">
                     <p class="tenure">2021 - Present</p>
                     <div class="card-column"> 
                          <a>
-                             <h3 class="anchor-text card-header">Freelance Design
+                             <h3 class="expProTitles card-header">Freelance Design
                              </h3>
                          </a>
                          <p>Over the past few years I have been doing professional design work for various
@@ -117,7 +138,7 @@
                     <p class="tenure">2021 - 2023</p>
                     <div class="card-column">
                          <a>
-                             <h3 class="anchor-text card-header">Bachelor of Design ⋅ Swinburne University ICON</h3>
+                             <h3 class="expProTitles card-header">Bachelor of Design ⋅ Swinburne University ICON</h3>
                          </a>
                          <p>Bachelor of Design, Major in User Experience / Interaction, Minor in Marketing and
                             Diploma of Design</p>
@@ -145,24 +166,24 @@
         </section>
         
         
-        
+        <!-- Projects -->
         <section id="projects">
-            <div class="stickyHeaders">
-                <div class="stickyHeader">
-                    <h2 class="lightText">PROJECTS</h2>
+                <div class="titleHeading">
+                    <h2>PROJECTS</h2>
                 </div>
-            </div>
                 <div class="project-contents">
+                    
+                    <!-- Project 1 - NBCSP -->
                     <div class="project-card">
                         <div class="project-image-container">
                             <img src="/public/bowel-cancer.jpg" alt="NBCSP Thumbnail"/>
                         </div>
                         <div class="card-column">
                              <a>
-                                 <h3 class="anchor-text card-header">Research and Graphic Design ⋅ National Bowel Cancer Screening Process</h3>
+                                 <h3 class="expProTitles card-header">Research and Graphic Design ⋅ National Bowel Cancer Screening Process</h3>
                              </a>
                              <p>2023 saw my greatest university challenge yet. This multidiscipline team consisted of 6 people, who were tasked with coming up with a way to improve the participation rates within the National Bowel Cancer Screening Process.</p>
-                             <a href="/" target="_blank" class="anchor-text project-stat-link">
+                             <a href="/public/NBCSP Project.pdf" target="_blank" class="anchor-text project-stat-link">
                                 <p>View Project
                                     <i class="fa-solid fa-arrow-right
                                 anchor-icon"></i>
@@ -191,10 +212,10 @@
                         </div>
                         <div class="card-column">
                              <a>
-                                 <h3 class="anchor-text card-header">Social Media Marketing ⋅ Blend</h3>
+                                 <h3 class="expProTitles card-header">Social Media Marketing ⋅ Blend</h3>
                              </a>
                              <p>Blend is a Melbourne based company that specialises in promoting local art, music and fashion. This project involved creating a website, logo, brand identity, running weekly posts on Facebook, Twitter and Instagram, as well as a weekly email and blog post on the Blend Melbourne website.</p>
-                             <a href="/" target="_blank" class="anchor-text project-stat-link">
+                             <a href="/public/BLEND Project.pdf" target="_blank" class="anchor-text project-stat-link">
                                 <p>View Project
                                     <i class="fa-solid fa-arrow-right
                                 anchor-icon"></i>
@@ -217,10 +238,10 @@
                         </div>
                         <div class="card-column">
                              <a>
-                                 <h3 class="anchor-text card-header">UI / UX Design and Branding ⋅ Music App</h3>
+                                 <h3 class="expProTitles card-header">UI / UX Design and Branding ⋅ Music App</h3>
                              </a>
                              <p>This 2022 university project required us to design a digital storytelling online application. I created a music app, similar to Spotify and Tik Tok, which featured music videos and user created videos. </p>
-                             <a href="/" target="_blank" class="anchor-text project-stat-link">
+                             <a href="/public/MUSIC APP Project.pdf" target="_blank" class="anchor-text project-stat-link">
                                 <p>View Project
                                     <i class="fa-solid fa-arrow-right
                                 anchor-icon"></i>
@@ -246,10 +267,10 @@
                         </div>
                         <div class="card-column">
                              <a>
-                                 <h3 class="anchor-text card-header">Information and Graphic Design ⋅ Geography Teachers Association Victoria</h3>
+                                 <h3 class="expProTitles card-header">Information and Graphic Design ⋅ Geography Teachers Association Victoria</h3>
                              </a>
                              <p>I have done several jobs for GTAV as a freelance designer, completing projects such as posters, educational books, pamphlets and an annual report.</p>
-                             <a href="/" target="_blank" class="anchor-text project-stat-link">
+                             <a href="/public/GTAV Project.pdf" target="_blank" class="anchor-text project-stat-link">
                                 <p>View Project
                                     <i class="fa-solid fa-arrow-right
                                 anchor-icon"></i>
@@ -275,10 +296,10 @@
                         </div>
                         <div class="card-column">
                              <a>
-                                 <h3 class="anchor-text card-header">Branding ⋅ OZTrail</h3>
+                                 <h3 class="expProTitles card-header">Branding ⋅ OZTrail</h3>
                              </a>
                              <p>This university project had us rebranding an existing Australian company. It included everything from a logo redesign and style guide. OzTrail, unfortunately, were not involved in the process.</p>
-                             <a href="/" target="_blank" class="anchor-text project-stat-link">
+                             <a href="/public/OZTRAIL Project.pdf" target="_blank" class="anchor-text project-stat-link">
                                 <p>View Project
                                     <i class="fa-solid fa-arrow-right
                                 anchor-icon"></i>
@@ -301,22 +322,56 @@
                 </a>
             
         </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="titleHeading">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="contact-contents">
+                <form method="POST" netlify target="_blank">
+                    <Input name="name" type="text" placeholder="Name" required />
+                    <Input name="email" type="email" placeholder="Email" required />
+                    <Textarea name="message" placeholder="Message" required></Textarea>
+                    <Button type="submit" >Send Message</Button>
+                </form>
+            </div>
+        </section>
+    
+    
     </main>
+    
+    <!-- Footer -->
     <footer>
         <p>
             Designed in 
-            <a href="https://www.figma.com/" target="_blank" class="anchor-text">Figma</a>. Coded in 
-            <a href="https://code.visualstudio.com/" target="_blank" class="anchor-text" >Visual Studio Code</a> by myself. 
-            <br />Built with HTML and CSS, and deployed with 
-            <a href="https://www.netlify.com/" target="_blank" class="anchor-text">Netlify</a>. 
+            <a href="https://www.figma.com/" target="_blank" class="footer-text">Figma</a>. Coded in 
+            <a href="https://code.visualstudio.com/" target="_blank" class="footer-text" >Visual Studio Code</a> by myself. 
+            <br />Built with HTML, CSS and JavaScipt and deployed with 
+            <a href="https://www.netlify.com/" target="_blank" class="footer-text">Netlify</a>. 
             <br />All text is set in the 
-            <a href="https://rsms.me/inter/" target="_blank" class="anchor-text">Inter</a> typeface
+            <a href="https://rsms.me/inter/" target="_blank" class="footer-text">Inter</a> typeface.
         </p>
         <a href="#top-of-page" class="scroll-to-top">
             <i class="fa-solid fa-arrow-up"></i>
         </a>
     </footer>
+    
+    <!-- Menu Hover Script -->
+    <script>
+        const cards = document.querySelectorAll(".card");
+        const wrapper = document.querySelector(".cards");
 
+        wrapper.addEventListener("mousemove", function (event) {
+            cards.forEach((card) => {
+                const rect = card.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+
+                card.style.background = `radial-gradient(960px circle at ${x}px ${y}px, rgba(212, 200, 230), transparent 15%)`
+            })
+        })
+    </script>
 
 </body>
 

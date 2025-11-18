@@ -1,8 +1,9 @@
 :root {
-    
     --background-accent: rgba(45, 212, 191, .1);
-    --color-highlight: #e2e8f0;
-    
+    --color-highlight: #eaeff4;
+    --color-background: #000218;
+    --color-accent: #bdc4cc;
+    --color-card: #02062f;
 }
 
 html {
@@ -19,8 +20,8 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: #000218;
-    color: #94a3b8;
+    background-color: var(--color-background);
+    color: var(--color-accent);
     padding: 4rem 2rem;
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -29,17 +30,6 @@ body {
 
 p {
     line-height: 1.5rem;
-}
-
-p::selection, 
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection {
-    background-color: var(--color-accent);
-    color: #0f172a;
 }
 
 header,
@@ -108,71 +98,76 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 section h2 {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 500;
-    padding-left: 1rem;
 }
 
-.stickyHeaders {
-    position: sticky;
-    top: 10px;
-    padding: 1rem 0;
+.menuText {
+    display: flex;
+    justify-content: left;
+    color: var(--color-highlight);
+    text-decoration: none;
+    padding: 8px 10px;
+    transition-duration: 200ms;
+}
+
+.cards {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    color: #e2e8f0;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 8px;
+    width: 50%;
 }
 
-.stickyHeader {
-    background: black;
+.card {
+    width: 140px;
+    background: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.15s;
 }
 
-.stickyHeader::before {
+.card::before {
     content: "";
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: inherit;
     background: radial-gradient(
-        950px circle at 0 0,
-        rgba(11, 155, 244, 0.1),
-        transparent 80%
+        960px circle at 0 0,
+        rgba(212, 200, 230, 0.1),
+        transparent 25%
     );
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    box-shadow: -1px -1px 6px -1.5px #e2e8f0;
 }
 
-
-
-.stickyHeader:hover::before {
-    opacity:1;
+.card-content {
+    background-color: var(--color-card);
+    border-radius: inherit;
+    transition: all 0.25s;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
 }
 
-.stickyHeaders h2 {
-    position: relative;
-    z-index: 2;
-    
+.card:hover {
+    transform: scale(0.98);
 }
 
-.stickyHeaders::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #000218;
-    border: 1px solid;
-    border-image: linear-gradient(-68deg,#575757, #e2e8f0);
-    border-image-slice: 1;
-    
+.card:hover::before {
+    opacity: 1;
 }
+
 
 .about-contents {
     display: flex;
@@ -184,18 +179,37 @@ section h2 {
     font-size: 1.1rem;
 }
 
+.expProTitles {
+    color: var(--color-highlight);
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+}
+
 .anchor-text {
+    display: flex;
+    justify-content: left;
     color: var(--color-highlight);
     text-decoration: none;
-    transition-duration: 200ms;
 }
 
 .anchor-text:hover {
-    color: var(--color-accent)
+    color: var(--color-accent);
+}
+
+.titleHeading {
+    color: var(--color-highlight);
+    background: var(--color-card);
+    padding: 8px 12px;
+    border: 1px solid;
+    border-image: linear-gradient(-68deg,#02062f, #e2e8f0);
+    border-image-slice: 1;
+    box-shadow: -1.5px -1px 3px -2px var(--color-highlight);
 }
 
 .experience-contents,
-.project-contents {
+.project-contents,
+.contact-contents {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -380,6 +394,7 @@ section h2 {
 
 .resume-link:hover span {
     padding-left: 0.25rem;
+    text-decoration: none;
 }
 
 .resume-link::after {
@@ -395,7 +410,50 @@ section h2 {
 
 .resume-link:hover::after {
     background: var(--color-accent);
+    text-decoration: none;
 
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 60px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    border-image: linear-gradient(-68deg,#02062f, #7c809b);
+    border-image-slice: 1;
+    color: #e2e8f0;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+    border-image: linear-gradient(-68deg,#02062f, #e2e8f0);
+    border-image-slice: 1;
+    color: #e2e8f0;
+}
+
+
+button {
+    padding: 8px;
+    background: #02062f;
+    border: none;
+    color: #eaeff4;
 }
 
 footer {
@@ -406,16 +464,23 @@ footer {
     align-items: flex-start;
 }
 
+.footer-text {
+    color: var(--color-highlight);
+    text-decoration: none;
+    transition-duration: 200ms;
+}
+
+
 footer p {
     font-size: 0.9rem;
 }
 
 .scroll-to-top {
     text-decoration: none;
-    background: #01031a;
-    color: #e2e8f0;
+    background: var(--color-card);
+    color: var(--color-highlight);
     border-image-slice: 1;
-    box-shadow: -1.5px -1px 5px -2px #e2e8f0;
+    box-shadow: -1.5px -1px 5px -2px var(--color-highlight);
     padding: 0 0.8rem;
     aspect-ratio: 1/1;
     display: grid;
@@ -533,6 +598,7 @@ footer p {
         margin-right: auto;
         padding-top: 10.7rem;
     }
+
     
     .fullscreen {
         display: none;
